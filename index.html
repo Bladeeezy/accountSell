@@ -1,0 +1,808 @@
+<DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <title>ggSell</title>
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/gallery.css">
+        <link rel="stylesheet" href="css/teams.css">
+        <link rel="stylesheet" href="css/testimonials.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+    </head>
+    <style>
+        .CenterL {
+            text-decoration: none;
+        }
+
+        .CenterO {
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            text-align: center;
+            margin-top: -10px;
+            text-decoration: none;
+            animation: none;
+        }
+
+        .teams {
+            text-align: center;
+        }
+
+        #CenterR {
+            margin-bottom: 0%;
+            margin-top: -13%;
+            font-family: "Algerian",
+        }
+
+        .nomer {
+            text-decoration: none;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides1,
+        .mySlides2 {
+            display: none
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+            height: 400px;
+            width: 400px;
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a grey background color */
+        .prev:hover,
+        .next:hover {
+            background-color: #f1f1f1;
+            color: black;
+        }
+
+        .DRT {
+            display: inline-block;
+            cursor: pointer;
+            margin-right: -50%;
+        }
+
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .change .bar1 {
+            -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+            transform: rotate(-45deg) translate(-9px, 6px);
+        }
+
+        .change .bar2 {
+            opacity: 0;
+        }
+
+        .change .bar3 {
+            -webkit-transform: rotate(45deg) translate(-8px, -8px);
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+
+        .rty {
+            margin-left: 95%;
+            margin-top: -3.5%;
+            text-decoration: none;
+        }
+
+        #main-item {
+            margin-right: 300%;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .VK {
+            width: 700px;
+            height: 100px;
+
+        }
+
+        .hour {
+            text-align: center;
+            margin-bottom: 2%;
+            margin-top: 26%;
+            ;
+        }
+
+        .dubai {
+            height: 200%;
+            width: 100%;
+        }
+
+        .neonText {
+            animation: flicker 1.5s infinite alternate;
+            color: #fff;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            18%,
+            22%,
+            25%,
+            53%,
+            57%,
+            100% {
+
+                text-shadow:
+                    0 0 4px #fff,
+                    0 0 11px #fff,
+                    0 0 19px #fff,
+                    0 0 40px #0fa,
+                    0 0 80px #0fa,
+                    0 0 90px #0fa,
+                    0 0 100px #0fa,
+                    0 0 150px #0fa;
+            }
+
+            20%,
+            24%,
+            55% {
+                text-shadow: none;
+            }
+        }
+
+        .sign-wrap-4 {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .sign-wrap-4 .sign_word {
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 50px;
+            color: #FFF;
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #BFE2FF, 0 0 0.5em #BFE2FF, 0 0 0.1em #BFE2FF;
+        }
+
+        .sign-wrap-4 .sign_word span {
+            animation: neon-4 linear infinite 2s;
+        }
+
+        @keyframes neon-4 {
+            78% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+
+            79% {
+                color: #0b3960;
+            }
+
+            80% {
+                text-shadow: none;
+            }
+
+            81% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+
+            82% {
+                color: #0b3960;
+                text-shadow: none;
+            }
+
+            83% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+
+            92% {
+                color: #0b3960;
+                text-shadow: none;
+            }
+
+            92.5% {
+                color: inherit;
+                text-shadow: inherit;
+            }
+        }
+
+        .sign-wrap-3 {
+            text-align: center;
+            padding: 20px 20px;
+        }
+
+        .sign-wrap-3 .sign_word {
+
+            font-size: 40px;
+            font-weight: bold;
+            line-height: 50px;
+            color: rgb(0, 0, 0);
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            animation: neon-3 5s steps(1, start) infinite reverse;
+        }
+
+        @keyframes neon-3 {
+            0% {
+                color: #0b3960;
+                text-shadow: 0 0 7px #0b3960, 0 0 8px #0b3960;
+            }
+
+            80% {
+                color: rgb(27, 176, 221);
+                text-shadow: 0 0 6px #fff, 0 0 10px #fff, 0 0 50px #79a7fc;
+            }
+
+            81% {
+                color: #155f81;
+                text-shadow: 0 0 6px #fff, 0 0 10px #fff, 0 0 50px #79a7fc;
+            }
+
+            82% {
+                color: #0b3960;
+                text-shadow: 0 0 7px #0b3960, 0 0 8px #0b3960;
+            }
+
+            83% {
+                color: #41d634;
+                text-shadow: 0 0 6px #fff, 0 0 10px #fff, 0 0 50px #79a7fc;
+            }
+
+            84% {
+                color: #0b3960;
+                text-shadow: 0 0 7px #0b3960, 0 0 8px #0b3960;
+            }
+
+            85% {
+                color: #218fc2;
+                text-shadow: 0 0 6px #fff, 0 0 10px #fff, 0 0 50px #79a7fc;
+            }
+
+            100% {
+                color: #0b151f;
+                text-shadow: 0 0 7px #0b3960, 0 0 8px #0b3960;
+            }
+        }
+
+        .audio {
+            margin-left: 75%;
+            ;
+            margin-bottom: 1%;
+            margin-top: 2%;
+
+        }
+
+        .audiotext {
+            margin-top: -5%;
+            margin-left: 68%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+    </style>
+
+    <body>
+
+        <div class="main-nav">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <b>
+                            <li>
+                                <p class="IlyaPolnyLoh">+375(33)-626-76-04</p>
+                            </li>
+                        </b>
+                        <b>
+                            <li><a href="#header">Домой</a></li>
+                        </b>
+                        <b>
+                            <li><a href="#about">Мы</a></li>
+                        </b>
+                        <b>
+                            <li><a href="#portfolio">Работы</a></li>
+                        </b>
+                        <b>
+                            <li><a href="#teams">Команда</a></li>
+                        </b>
+                        <b>
+                            <li><a href="#testimonials">Рекомендации</a></li>
+                        </b>
+                        <b>
+                            <li><a href="#contacts">Контакты</a></li>
+                        </b>
+            </div>
+            <a id="myBtn" class="rty">
+                <div class="rty" onclick="myFunction(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+            </a>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">x</span>
+                    <a href="https://vk.com"><button>
+                            <p>Войти через VK</p>
+                        </button></a>
+                </div>
+            </div>
+            </ul>
+            </nav>
+        </div><!-- /.container -->
+        </div><!-- /.main-nav -->
+        <header id="header">
+            <img class="dubai" src="./asd/maxresdefault.jpg">
+            <h1 class="neonText" id="CenterR">ggSell</h1>
+            <div class="sign-wrap-4">
+                <div class="sign_word" id-"CenterR">Мы <span>создаем </span> то,<span> что</span> вам<span>
+                        нравится</span></div>
+            </div>
+        </header>
+        </div>
+        <h1 class="hour">
+            <div id="time" style="font-weight: bold;"> </div>
+            <span id="id_H" style="color: red;"></span> : <span id="id_M" style="color: green;"></span> : <span
+                id="id_S" style="color:blue;"></span>
+        </h1>
+        </div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc">
+            </div>
+            </header>
+            <b>
+                <p class="audiotext">Пока находишь нужный тебе товар послушай годную песню</p>
+            </b>
+            <div class="audio">
+                <audio controls>
+                    <source src="./asd/xxxmanera_-_Never_Broke_Again_74052658 (1).mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            <section id="about">
+                <div class="container">
+                    <div class="sign-wrap-3">
+                        <span class="sign_word">О нас</span>
+                    </div>
+                    <p>Мы компания которая <b>ggSell</b> занимаемся покупкой и продажей аккаунтов рахных игр таких как
+                        <i>(Fortnite,Dota 2,Brawl Stars и др.)</i> </p>
+                    <p>а также мы работаем с компаниями как <i></i>Epic games,Steam и Riot Games</p>
+                    <div class="row">
+                        <div class="column-2">
+                            <h3>Наш Процесс</h3>
+                            <p> <b>Уважаемые посетители</b>, покупка в магазине максимально проста и займет всего 3
+                                шага!
+                            <p><b>1.Выбор товара</b></p>
+                            Первым делом выберем интересный товар, пусть это будет Жирный Рандом - товар в наличии,
+                            доставка моментальная.
+                            <p><b>2.Оформление заказа</b></p>
+                            Выберете способ оплаты, внимательно проверить введенную почту и нажимайте перейти к оплате!
+                            <p><b>3.Получение товара</b></p>
+                            Скучный процесс оплаты через разные платёжные системы приводить в инструкции не будем,
+                            практически всегда это максимально просто и удобно.
+                            <h3>Наши особенности</h3>
+                            <p>Наша компания работает быстро и уверенно,<b>Удачных покупок!!!</b></p>
+                            <p>Чтобы написать отзыв Нажми
+                            <h1 class="CenterO"><a href="https://vk.com/public205310163">отзывы</a></h1>
+                            </p>
+                            <p><b>Если надо полное обьеснение проиди по <a
+                                        href="https://vk.me/join/_uXhHgKk83oEnA3xI369GexJXozNZbSFR2k=">ссылке</a></b>
+                            </p>
+                        </div>
+                        <div class="column-2">
+                            <img src="./asd/GS.png" class="img-fluid img-border" alt="About us">
+                        </div>
+                        <section id="portfolio">
+                            <div class="container">
+                                <div class="sign-wrap-3">
+                                    <span class="sign_word">Наши работы</span>
+                                </div>
+                                <div class="row">
+                                    <div class="portfolio-item column-3" data-descr="Fortnite">
+                                        <a target="_blank" href="Аккаунты Fortnite.html""><img src="./asd/Fortnite.jpg"
+                                            class="img-fluid" alt="Fortnite"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Wargaming">
+                                        <a target="_blank" href="Аккануты Wargaming.html"><img src="./asd/Wargaming.jpg"
+                                                alt="Terrace design" class="img-fluid"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Minecraft">
+                                        <a target="_blank" href="Аккаунты Minecraft.html"><img src="./asd/minecraft.jpg"
+                                                alt="Wooden house design" class="img-fluid"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Valorant">
+                                        <a target="_blank" href="Аккаунты Riot Games.html"><img src="./asd/Valorant.jpg"
+                                                alt="White home design" class="img-fluid"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Brawl Stars">
+                                        <a href="Аккаунты Бравл Старс.html" target="_blank"><img class="img-fluid"
+                                                src="./asd/Brawl Stars.jpg" alt="Cafe design"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Clash Royale">
+                                        <a target="_blank" href="Аккаунты Clash Royale.html"><img src="./asd/Clesh Royale.jpg"
+                                                class="img-fluid" alt="Bedroom design"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Rise of Kingdoms ">
+                                        <a target="_blank" href="Аккаунты Rise of Kingdoms.html"><img
+                                                src="./asd/Rise of Kingdoms.jpg" class="img-fluid" alt="Bedroom design"></a>
+                                    </div>
+                                    <div class="portfolio-item column-3" data-descr="Dota 2">
+                                        <a target="_blank" href="Aккаунты Dota 2.html"><img src="./asd/Dota 2.jpg"
+                                                class="img-fluid" alt="Bedroom design"></a>
+                                    </div>
+                                </div><!-- /.row-->
+                            </div><!-- /.container -->
+                        </section>
+                        <section id="teams">
+                            <div class="sign-wrap-3">
+                                <span class="sign_word">Наша команда</span>
+                            </div>
+                            <div class="slideshow-container">
+                                <div class="mySlides1">
+                                    <img src="./asd/Ilya.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides1">
+                                    <img src="./asd/Nazar.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides1">
+                                    <img src="./asd/Qy7t9PRAfvk0KTgroezl_DQkktyxLjA1gia8KR3kWHzA-SJuImFmC73p70ekxdmFI9Dx9KFm-GOUTaVFlWTeL0iO.jpg"
+                                        style="width:100%">
+                                </div>
+                                <div class="mySlides1">
+                                    <img src="./asd/grisha.jpg" style="width:100%">
+                                </div>
+                                <a class="prev" onclick="plusSlides(-1, 0)">❮</a>
+                                <a class="next" onclick="plusSlides(1, 0)">❯</a>
+                            </div>
+                            <section id="testimonials">
+                                <div class="container">
+                                    <div class="sign-wrap-3">
+                                        <span class="sign_word">Рекомендации</span>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column-2 mb">
+                                            <div class="testimonial">
+                                                <a href="https://vk.com/zhenyagerman" target="_blank"><img
+                                                        src="./asd/Qy7t9PRAfvk0KTgroezl_DQkktyxLjA1gia8KR3kWHzA-SJuImFmC73p70ekxdmFI9Dx9KFm-GOUTaVFlWTeL0iO.jpg" 
+                                                        alt="Author 1" class="testimonial-author img-border" > </a>
+                                                <div class="testimonial-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+                                                        doloremque, non quas perferendis.</p>
+                                                    <p>Et ut, quidem numquam maxime velit aliquid cumque perspiciatis
+                                                        doloribus, consequuntur accusantium. Omnis, magnam.</p>
+                                                    <footer>Женя Герман</footer>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column-2 mb">
+                                            <div class="testimonial">
+                                                <a href="https://vk.com/g.sauta2" target="_blank"> <img src="./asd/grisha.jpg" alt="Author 2"
+                                                        class="testimonial-author img-border"></a>
+
+                                                <div class="testimonial-body">
+                                                    <p>Deserunt laborum, vero similique hic consequatur quod in maiores
+                                                        minus, quaerat sapiente facilis.</p>
+                                                    <p>Reiciendis, debitis, iusto. Aliquam qui, libero nam soluta
+                                                        tenetur adipisci voluptatum laborum architecto.</p>
+                                                    <footer>Григорий Саута</footer>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="column-2 mb">
+                                            <div class="testimonial">
+                                                <a href="https://vk.com/brat_monke" target="_blank"><img src="./asd/Nazar.jpg" alt="Author 1"
+                                                        class="testimonial-author img-border"></a>
+                                                <div class="testimonial-body">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+                                                        doloremque, non quas perferendis.</p>
+                                                    <p>Et ut, quidem numquam maxime velit aliquid cumque perspiciatis
+                                                        doloribus, consequuntur accusantium. Omnis, magnam.</p>
+                                                    <footer>Назар Янович</footer>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="column-2 mb" >
+                                            <div class="testimonial" >
+                                                <a href="https://vk.com/imitrofanov7" target="_blank"><img src="./asd/Ilya.jpg" alt="Author 2" 
+                                                        class="testimonial-author img-border"></a>
+
+                                                <div class="testimonial-body">
+                                                    <p>Deserunt laborum, vero similique hic consequatur quod in maiores
+                                                        minus, quaerat sapiente facilis.</p>
+                                                    <p>Reiciendis, debitis, iusto. Aliquam qui, libero nam soluta
+                                                        tenetur adipisci voluptatum laborum architecto.</p>
+                                                    <footer>Илья Митрофанов</footer>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-center"><a href="index.html" class="btn">Back to home</a></p>
+                                </div>
+                    </div>
+            </section>
+            <section id="contacts">
+                <div class="container">
+                    <div class="sign-wrap-3">
+                        <span class="sign_word">Контакты</span>
+                    </div>
+                    <form name="contactForm">
+                        <div class="row">
+                            <div class="column-2">
+                                <p>
+                                    <label for="username">Имя</label>
+                                    <input type="text" id="username" name="username">
+                                </p>
+                                <p>
+                                    <label for="useremail">Логин</label>
+                                    <input type="email" id="useremail" name="useremail">
+                                </p>
+                                <p>
+                                    <label for="subject">Пароль</label>
+                                    <input type="email" id="useremail" name="subject">
+                                </p>
+                            </div>
+                            <div class="column-2">
+                                <p>
+                                    <label for="usermessage">Сообщение</label>
+                                    <textarea class="u-full-width" id="usermessage" name="usermessage"></textarea>
+                                </p>
+                                <p>
+                                    <a href="https://www.gmail.com/mail/help/intl/ru/about.html?de."><input class="btn"
+                                            value="Зарегистрироваться"></a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <footer id="footer">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div>
+                            <p>Спонсор <a href="https://ftsell.ru/" target="_blank">ftsell.ru</a></p>
+                        </div>
+                        <div>
+                            <p>
+                                <a href="#header">Домой</a>
+                                <a href="#about">О нас</a>
+                                <a href="#portfolio">Работы</a>
+                                <a href="#teams">Команда</a>
+                                <a href="#testimonials">Рекомендации</a>
+                                <a href="#contacts">Контакты</a> <!-- target="_blank" -->
+                            </p>
+                        </div>
+                        <div>
+                            <p>Info from <a href="https://vk.com/imitrofanov7" target="_blank">+375336267604</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <script>
+
+                const btnHeader = document.getElementsByClassName("divBtnHeader")
+
+
+
+                var modal = document.getElementById("myModal");
+                var btn = document.getElementById("myBtn");
+                var span = document.getElementsByClassName("close")[0];
+                btn.onclick = function () {
+                    modal.style.display = "block";
+                }
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+                window.onclick = function (event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+
+
+
+                function myFunction(x) {
+                    x.classList.toggle("change");
+                }
+                var slideIndex = [1, 1];
+                var slideId = ["mySlides1", "mySlides2"]
+                showSlides(1, 0);
+                showSlides(1, 1);
+
+                function plusSlides(n, no) {
+                    showSlides(slideIndex[no] += n, no);
+                }
+
+                function showSlides(n, no) {
+                    var i;
+                    var x = document.getElementsByClassName(slideId[no]);
+                    if (n > x.length) { slideIndex[no] = 1 }
+                    if (n < 1) { slideIndex[no] = x.length }
+                    for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";
+                    }
+                    x[slideIndex[no] - 1].style.display = "block";
+                }
+
+
+
+
+                function time() {
+                    date = new Date(),
+                        h = date.getHours(),
+                        m = date.getMinutes(),
+                        s = date.getSeconds(),
+
+                        h = (h < 10) ? '0' + h : h,
+                        m = (m < 10) ? '0' + m : m,
+                        s = (s < 10) ? '0' + s : s;
+
+                    hours = document.getElementById("id_H");
+                    minutes = document.getElementById("id_M");
+                    seconds = document.getElementById("id_S");
+
+                    hours.innerHTML = h;
+                    minutes.innerHTML = m;
+                    seconds.innerHTML = s;
+                };
+
+            </script>
+            <script>setInterval(time, 1000);</script>
+            </script>
+
+    </body>
+
+    </html>
